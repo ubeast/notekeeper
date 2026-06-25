@@ -12,5 +12,11 @@ dependencies = []
 [project.scripts]
 nk = "notekeeper.cli:main"
 
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/notekeeper"]
