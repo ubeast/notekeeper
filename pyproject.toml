@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "notekeeper"
+version = "0.1.0"
+description = "Personal markdown knowledge base: search, capture, and validate notes by project/tag/category."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+nk = "notekeeper.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/notekeeper"]
